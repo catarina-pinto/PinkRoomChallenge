@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class LoginViewModel: ObservableObject {
     @Published var email: String
@@ -13,13 +14,15 @@ class LoginViewModel: ObservableObject {
     @Published var showPassword: Bool
     @Published var shouldNavigate: Bool
     @Published var authorizedUsers: [User]
+    @Published var presentPopup: Binding<Bool>
     
-    init() {
+    init(presentPopup: Binding<Bool>) {
         self.email = ""
         self.password = ""
         self.showPassword = false
         self.shouldNavigate = false
         self.authorizedUsers = [User(user: ["catarina@email.com", "password"]), User(user: ["user@email.com", "password"])]
+        self.presentPopup = presentPopup
     }
     
     func authenticate() {
@@ -27,8 +30,11 @@ class LoginViewModel: ObservableObject {
         
         let authorized = authorizedUsers.contains { [userToAuthenticate].contains($0) }
         if authorized {
-            shouldNavigate = true
+            self.shouldNavigate = true
             print("Should navigate 2")
+        }
+        else {
+            self.presentPopup.wrappedValue.toggle()
         }
     }
     

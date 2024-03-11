@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import PinkRoomChallenge
 
 final class PinkRoomChallengeUITests: XCTestCase {
 
@@ -22,14 +23,86 @@ final class PinkRoomChallengeUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testSignInButtonEnabled() {
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let emailTextField = app.textFields["E-mail"]
+            emailTextField.tap()
+            emailTextField.typeText("email@test.com")
+        
+        let passwordSecureField = app.secureTextFields["Password"]
+            passwordSecureField.tap()
+            passwordSecureField.typeText("password")
+        
+        let signInButton = app.buttons["Sign In"]
+        XCTAssert(signInButton.isEnabled, "Sign in button should be enabled")
     }
-
+    
+    func testSignInButtonDisabledInvalidEmailFormat() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let emailTextField = app.textFields["E-mail"]
+            emailTextField.tap()
+            emailTextField.typeText("email")
+        
+        let passwordSecureField = app.secureTextFields["Password"]
+            passwordSecureField.tap()
+            passwordSecureField.typeText("password")
+        
+        let signInButton = app.buttons["Sign In"]
+        XCTAssertFalse(signInButton.isEnabled, "Sign in button should be disabled")
+    }
+    
+    func testSignInButtonDisabledEmptyEmail() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let emailTextField = app.textFields["E-mail"]
+            emailTextField.tap()
+            emailTextField.typeText("")
+        
+        let passwordSecureField = app.secureTextFields["Password"]
+            passwordSecureField.tap()
+            passwordSecureField.typeText("password")
+        
+        let signInButton = app.buttons["Sign In"]
+        XCTAssertFalse(signInButton.isEnabled, "Sign in button should be disabled")
+    }
+    
+    func testSignInButtonDisabledEmptyPassword() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let emailTextField = app.textFields["E-mail"]
+            emailTextField.tap()
+            emailTextField.typeText("email@test.com")
+        
+        let passwordSecureField = app.secureTextFields["Password"]
+            passwordSecureField.tap()
+            passwordSecureField.typeText("")
+        
+        let signInButton = app.buttons["Sign In"]
+        XCTAssertFalse(signInButton.isEnabled, "Sign in button should be disabled")
+    }
+    
+    func testSignInButtonDisabledEmptyEmailAndPassword() {
+        let app = XCUIApplication()
+        app.launch()
+        
+        let emailTextField = app.textFields["E-mail"]
+            emailTextField.tap()
+            emailTextField.typeText("")
+        
+        let passwordSecureField = app.secureTextFields["Password"]
+            passwordSecureField.tap()
+            passwordSecureField.typeText("")
+        
+        let signInButton = app.buttons["Sign In"]
+        XCTAssertFalse(signInButton.isEnabled, "Sign in button should be disabled")
+    }
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.

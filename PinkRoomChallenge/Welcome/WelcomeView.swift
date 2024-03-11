@@ -22,10 +22,10 @@ struct WelcomeView: View {
                     .ignoresSafeArea()
             }
             .navigationDestination(
-                 isPresented: $welcomeViewModel.shouldNavigate) {
-                     EmptyView()
-                     MainView(selectedSideMenuTab: 1)
-                 }
+                isPresented: $welcomeViewModel.shouldNavigate) {
+                    EmptyView()
+                    MainView(selectedSideMenuTab: 1)
+                }
         }
         .onAppear(perform: {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(3.0)) {

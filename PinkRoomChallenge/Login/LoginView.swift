@@ -17,8 +17,8 @@ struct User: Hashable, Equatable {
 struct LoginView: View {
     @ObservedObject var loginViewModel: LoginViewModel
     
-    init() {
-        self.loginViewModel = LoginViewModel()
+    init(presentPopup: Binding<Bool>) {
+        self.loginViewModel = LoginViewModel(presentPopup: presentPopup)
     }
     
     var body: some View {
@@ -43,7 +43,7 @@ struct LoginView: View {
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 5)
-                               
+                    
                     HStack {
                         Group {
                             if loginViewModel.showPassword {
@@ -67,33 +67,31 @@ struct LoginView: View {
                                     .foregroundColor(.black)
                                     .padding(.trailing, 20)
                             }}
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 6)
-                                    .stroke(.gray, lineWidth: 2)
-                            }
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(.gray, lineWidth: 2)
+                        }
                     }
                     .padding(.horizontal)
-                    
-                    // Spacer()
-                    
+                                        
                     Button("Sign In") {
                         loginViewModel.authenticate()
                     }
                     .navigationDestination(isPresented: $loginViewModel.shouldNavigate) { MainView(selectedSideMenuTab: 2)
                     }
                     .disabled(loginViewModel.signInDisabled())
-                       .frame(maxWidth: .infinity, alignment: .center)
-                       .foregroundColor(buttonColor)
-                       .bold()
-                       .padding(15)
-                       .overlay {
-                           RoundedRectangle(cornerRadius: 6)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .foregroundColor(buttonColor)
+                    .bold()
+                    .padding(15)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 6)
                             .stroke(buttonColor, lineWidth: 2)
-                       }
-                       .padding(.horizontal, 100)
-                       .padding(.top, 125)
+                    }
+                    .padding(.horizontal, 100)
+                    .padding(.top, 125)
                     
-                   Spacer()
+                    Spacer()
                 }
             }
         }
@@ -108,6 +106,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(presentPopup: .constant(true))
     }
 }

@@ -8,69 +8,50 @@
 import SwiftUI
 
 struct PopupView: View {
-    @ObservedObject var sideMenuViewModel: SideMenuViewModel
-    
-    init(presentSideMenu: Binding<Bool>, selectedSideMenuTab: Binding<Int>) {
-        self.sideMenuViewModel = SideMenuViewModel(presentSideMenu: presentSideMenu, selectedSideMenuTab: selectedSideMenuTab)
-    }
-    
     var body: some View {
-        HStack {
-            VStack(alignment: .leading, spacing: 0) {
-                Spacer() 
-                LoginErrorPopupView()
-                    .frame(height: 140)
-                    //.padding(.bottom, 30)
-                
-                                
-               // Spacer()
-            }
-            //.padding(.top, 100)
-            .frame(width: 270)
-            .background(
-                Color.white
-            )
-            
-           // Spacer()
+        VStack(alignment: .leading) {
+            LoginErrorPopupView()
+                .frame(width: 380, height: 200, alignment: .bottom)
+                .background(
+                    Color("PinkRoomGray")
+                )
         }
         .background(.clear)
+        .cornerRadius(15)
     }
     
-    func LoginErrorPopupView() -> some View{
-        VStack(alignment: .center){
-            HStack{
-                
-                ZStack {
-                    Circle()
-                        .fill(Color("PinkRoomPink"))
-                    Image(systemName: "xmark")
-                        .resizable()
-                        .scaledToFit()
-                        .font(Font.body.weight(.bold))
-                        .scaleEffect(0.45)
-                        .foregroundColor(Color("PinkRoomGray"))
-                }
-               // Image(systemName: "xmark")
-                 //   .resizable()
-                  //  .aspectRatio(contentMode: .fill)
-                  //  .frame(width: 100, height: 100)
-                   // .cornerRadius(50)
-               
+    
+}
+
+struct LoginErrorPopupView: View{
+    var body: some View {
+        VStack(alignment: .center, spacing: 15){
+            Spacer()
+            ZStack {
+                Circle()
+                    .fill(Color("PinkRoomPink"))
+                Image(systemName: "xmark")
+                    .resizable()
+                    .scaledToFit()
+                    .font(Font.body.weight(.bold))
+                    .scaleEffect(0.45)
+                    .foregroundColor(Color("PinkRoomGray"))
             }
-            
-            //Spacer()
+            .frame(width: 85)
             
             Text("Invalid credentials")
                 .font(.system(size: 18, weight: .bold))
                 .foregroundColor(.black)
             
-            Text("User is not registered.")
+            Spacer()
         }
+        .padding(15)
     }
 }
 
 struct PopupViewView_Previews: PreviewProvider {
     static var previews: some View {
-        PopupView(presentSideMenu: .constant(true), selectedSideMenuTab: .constant(0))
+        PopupView()
     }
 }
+

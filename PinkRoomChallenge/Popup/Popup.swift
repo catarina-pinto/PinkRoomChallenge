@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct Popup: View {
-    @ObservedObject var sideMenuViewModel: SideMenuViewModel
+    @ObservedObject var popupViewModel: PopupViewModel
     var content: AnyView
     var edgeTransition: AnyTransition
     
-    init(presentSideMenu: Binding<Bool>, selectedSideMenuTab: Binding<Int>, content: AnyView) {
-        self.sideMenuViewModel = SideMenuViewModel(presentSideMenu: presentSideMenu, selectedSideMenuTab: selectedSideMenuTab)
+    init(presentPopup: Binding<Bool>, content: AnyView) {
+        self.popupViewModel = PopupViewModel(presentPopup: presentPopup)
         self.content = content
-        self.edgeTransition = .move(edge: .leading)
+        self.edgeTransition = .move(edge: .bottom)
     }
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            if (sideMenuViewModel.presentSideMenu.wrappedValue) {
+            if (popupViewModel.presentPopup.wrappedValue) {
                 Color.black
                     .opacity(0.3)
                     .ignoresSafeArea()
                     .onTapGesture {
-                        sideMenuViewModel.presentSideMenu.wrappedValue.toggle()
+                        popupViewModel.presentPopup.wrappedValue.toggle()
                     }
                 content
                     .transition(edgeTransition)
@@ -36,6 +36,6 @@ struct Popup: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .ignoresSafeArea()
-        .animation(.easeInOut, value: sideMenuViewModel.presentSideMenu.wrappedValue)
+        .animation(.easeInOut, value: popupViewModel.presentPopup.wrappedValue)
     }
 }

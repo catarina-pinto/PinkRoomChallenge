@@ -44,7 +44,7 @@ struct HomeView: View {
                     .clipped()
                     .ignoresSafeArea()
                 )
-           
+                
                 Spacer()
                 
                 
