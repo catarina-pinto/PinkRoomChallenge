@@ -11,7 +11,7 @@ import SwiftUI
 struct PinkRoomChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(selectedSideMenuTab: 0)
         }
     }
 }

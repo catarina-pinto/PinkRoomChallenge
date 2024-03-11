@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5F8E87272B9F30E200CB34B5 /* PinkRoomChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87262B9F30E200CB34B5 /* PinkRoomChallengeApp.swift */; };
-		5F8E87292B9F30E200CB34B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87282B9F30E200CB34B5 /* ContentView.swift */; };
 		5F8E872B2B9F30E500CB34B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8E872A2B9F30E500CB34B5 /* Assets.xcassets */; };
 		5F8E872E2B9F30E500CB34B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8E872D2B9F30E500CB34B5 /* Preview Assets.xcassets */; };
 		5F8E87382B9F30E500CB34B5 /* PinkRoomChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87372B9F30E500CB34B5 /* PinkRoomChallengeTests.swift */; };
 		5F8E87422B9F30E500CB34B5 /* PinkRoomChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87412B9F30E500CB34B5 /* PinkRoomChallengeUITests.swift */; };
 		5F8E87442B9F30E500CB34B5 /* PinkRoomChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87432B9F30E500CB34B5 /* PinkRoomChallengeUITestsLaunchTests.swift */; };
+		5F8E87562B9F321900CB34B5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87552B9F321900CB34B5 /* HomeView.swift */; };
+		5F8E87582B9F322800CB34B5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87572B9F322800CB34B5 /* HomeViewModel.swift */; };
+		5F8E875A2B9F32A100CB34B5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87592B9F32A100CB34B5 /* MainView.swift */; };
+		5F8E875C2B9F32DF00CB34B5 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E875B2B9F32DF00CB34B5 /* MainViewModel.swift */; };
+		5F8E875E2B9F32F900CB34B5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E875D2B9F32F900CB34B5 /* LoginViewModel.swift */; };
+		5F8E87602B9F331000CB34B5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E875F2B9F331000CB34B5 /* LoginView.swift */; };
+		5F8E87622B9F334800CB34B5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87612B9F334800CB34B5 /* WelcomeView.swift */; };
+		5F8E87642B9F336E00CB34B5 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87632B9F336E00CB34B5 /* WelcomeViewModel.swift */; };
+		5F8E87662B9F338B00CB34B5 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87652B9F338B00CB34B5 /* SideMenuViewModel.swift */; };
+		5F8E87682B9F33D100CB34B5 /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87672B9F33D100CB34B5 /* SideMenu.swift */; };
+		5F8E876A2B9F33F900CB34B5 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87692B9F33F900CB34B5 /* SideMenuView.swift */; };
+		5F8E876F2B9F4ED000CB34B5 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E876E2B9F4ED000CB34B5 /* PopupView.swift */; };
+		5F8E87712B9F4EEB00CB34B5 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87702B9F4EEB00CB34B5 /* Popup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +48,6 @@
 /* Begin PBXFileReference section */
 		5F8E87232B9F30E200CB34B5 /* PinkRoomChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkRoomChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8E87262B9F30E200CB34B5 /* PinkRoomChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkRoomChallengeApp.swift; sourceTree = "<group>"; };
-		5F8E87282B9F30E200CB34B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5F8E872A2B9F30E500CB34B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F8E872D2B9F30E500CB34B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5F8E87332B9F30E500CB34B5 /* PinkRoomChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinkRoomChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +55,19 @@
 		5F8E873D2B9F30E500CB34B5 /* PinkRoomChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinkRoomChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8E87412B9F30E500CB34B5 /* PinkRoomChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkRoomChallengeUITests.swift; sourceTree = "<group>"; };
 		5F8E87432B9F30E500CB34B5 /* PinkRoomChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkRoomChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5F8E87552B9F321900CB34B5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5F8E87572B9F322800CB34B5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5F8E87592B9F32A100CB34B5 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5F8E875B2B9F32DF00CB34B5 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5F8E875D2B9F32F900CB34B5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5F8E875F2B9F331000CB34B5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5F8E87612B9F334800CB34B5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		5F8E87632B9F336E00CB34B5 /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		5F8E87652B9F338B00CB34B5 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		5F8E87672B9F33D100CB34B5 /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		5F8E87692B9F33F900CB34B5 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		5F8E876E2B9F4ED000CB34B5 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		5F8E87702B9F4EEB00CB34B5 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +118,13 @@
 		5F8E87252B9F30E200CB34B5 /* PinkRoomChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				5F8E876B2B9F4E8F00CB34B5 /* Popup */,
+				5F8E87542B9F31F300CB34B5 /* SideMenu */,
+				5F8E87532B9F31E800CB34B5 /* Welcome */,
+				5F8E87522B9F31DC00CB34B5 /* Main */,
+				5F8E87512B9F31D200CB34B5 /* Login */,
+				5F8E87502B9F31C500CB34B5 /* Home */,
 				5F8E87262B9F30E200CB34B5 /* PinkRoomChallengeApp.swift */,
-				5F8E87282B9F30E200CB34B5 /* ContentView.swift */,
 				5F8E872A2B9F30E500CB34B5 /* Assets.xcassets */,
 				5F8E872C2B9F30E500CB34B5 /* Preview Content */,
 			);
@@ -125,6 +154,61 @@
 				5F8E87432B9F30E500CB34B5 /* PinkRoomChallengeUITestsLaunchTests.swift */,
 			);
 			path = PinkRoomChallengeUITests;
+			sourceTree = "<group>";
+		};
+		5F8E87502B9F31C500CB34B5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5F8E87552B9F321900CB34B5 /* HomeView.swift */,
+				5F8E87572B9F322800CB34B5 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5F8E87512B9F31D200CB34B5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5F8E875F2B9F331000CB34B5 /* LoginView.swift */,
+				5F8E875D2B9F32F900CB34B5 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5F8E87522B9F31DC00CB34B5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5F8E87592B9F32A100CB34B5 /* MainView.swift */,
+				5F8E875B2B9F32DF00CB34B5 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5F8E87532B9F31E800CB34B5 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				5F8E87612B9F334800CB34B5 /* WelcomeView.swift */,
+				5F8E87632B9F336E00CB34B5 /* WelcomeViewModel.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		5F8E87542B9F31F300CB34B5 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5F8E87672B9F33D100CB34B5 /* SideMenu.swift */,
+				5F8E87692B9F33F900CB34B5 /* SideMenuView.swift */,
+				5F8E87652B9F338B00CB34B5 /* SideMenuViewModel.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		5F8E876B2B9F4E8F00CB34B5 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				5F8E87702B9F4EEB00CB34B5 /* Popup.swift */,
+				5F8E876E2B9F4ED000CB34B5 /* PopupView.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +341,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F8E87292B9F30E200CB34B5 /* ContentView.swift in Sources */,
+				5F8E87712B9F4EEB00CB34B5 /* Popup.swift in Sources */,
+				5F8E87682B9F33D100CB34B5 /* SideMenu.swift in Sources */,
+				5F8E875C2B9F32DF00CB34B5 /* MainViewModel.swift in Sources */,
+				5F8E87642B9F336E00CB34B5 /* WelcomeViewModel.swift in Sources */,
+				5F8E87602B9F331000CB34B5 /* LoginView.swift in Sources */,
 				5F8E87272B9F30E200CB34B5 /* PinkRoomChallengeApp.swift in Sources */,
+				5F8E87622B9F334800CB34B5 /* WelcomeView.swift in Sources */,
+				5F8E876A2B9F33F900CB34B5 /* SideMenuView.swift in Sources */,
+				5F8E875E2B9F32F900CB34B5 /* LoginViewModel.swift in Sources */,
+				5F8E875A2B9F32A100CB34B5 /* MainView.swift in Sources */,
+				5F8E87582B9F322800CB34B5 /* HomeViewModel.swift in Sources */,
+				5F8E87662B9F338B00CB34B5 /* SideMenuViewModel.swift in Sources */,
+				5F8E87562B9F321900CB34B5 /* HomeView.swift in Sources */,
+				5F8E876F2B9F4ED000CB34B5 /* PopupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
