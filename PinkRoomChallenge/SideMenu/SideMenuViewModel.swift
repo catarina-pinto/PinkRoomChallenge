@@ -10,7 +10,7 @@ import SwiftUI
 
 enum SideMenuRowType: Int, CaseIterable{
     case home = 2
-    case logout = 1    
+    case logout = 1
     
     var title: String{
         switch self {

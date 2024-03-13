@@ -73,7 +73,7 @@ struct LoginView: View {
                         }
                     }
                     .padding(.horizontal)
-                                        
+                    
                     Button("Sign In") {
                         loginViewModel.authenticate()
                     }

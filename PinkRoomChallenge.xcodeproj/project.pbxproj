@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F2211262BA0BC4100379888 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5F2211252BA0BC4100379888 /* Alamofire */; };
+		5F3867892BA072D300FEEEB4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3867882BA072D300FEEEB4 /* HomeModel.swift */; };
+		5F38678C2BA07EA900FEEEB4 /* RepositoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F38678B2BA07EA900FEEEB4 /* RepositoryCard.swift */; };
+		5F38678E2BA07F4A00FEEEB4 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F38678D2BA07F4A00FEEEB4 /* RepositoryViewModel.swift */; };
+		5F8472B12BA0D8C700D429C0 /* AlamofireNetworkActivityLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 5F8472B02BA0D8C700D429C0 /* AlamofireNetworkActivityLogger */; };
 		5F8E87272B9F30E200CB34B5 /* PinkRoomChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87262B9F30E200CB34B5 /* PinkRoomChallengeApp.swift */; };
 		5F8E872B2B9F30E500CB34B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8E872A2B9F30E500CB34B5 /* Assets.xcassets */; };
 		5F8E872E2B9F30E500CB34B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F8E872D2B9F30E500CB34B5 /* Preview Assets.xcassets */; };
@@ -28,6 +33,9 @@
 		5F8E87712B9F4EEB00CB34B5 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87702B9F4EEB00CB34B5 /* Popup.swift */; };
 		5F8E87752B9F853400CB34B5 /* PopupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87742B9F853400CB34B5 /* PopupViewModel.swift */; };
 		5F8E87772B9F868F00CB34B5 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87762B9F868F00CB34B5 /* LoginViewModelTests.swift */; };
+		5F8E877A2BA05B7600CB34B5 /* FiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E87792BA05B7600CB34B5 /* FiltersView.swift */; };
+		5F8E877C2BA05B9900CB34B5 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E877B2BA05B9900CB34B5 /* Filters.swift */; };
+		5F8E877E2BA05BC200CB34B5 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8E877D2BA05BC200CB34B5 /* FiltersViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F3867882BA072D300FEEEB4 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		5F38678B2BA07EA900FEEEB4 /* RepositoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCard.swift; sourceTree = "<group>"; };
+		5F38678D2BA07F4A00FEEEB4 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
 		5F8E87232B9F30E200CB34B5 /* PinkRoomChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkRoomChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F8E87262B9F30E200CB34B5 /* PinkRoomChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkRoomChallengeApp.swift; sourceTree = "<group>"; };
 		5F8E872A2B9F30E500CB34B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +83,9 @@
 		5F8E87702B9F4EEB00CB34B5 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		5F8E87742B9F853400CB34B5 /* PopupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewModel.swift; sourceTree = "<group>"; };
 		5F8E87762B9F868F00CB34B5 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		5F8E87792BA05B7600CB34B5 /* FiltersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersView.swift; sourceTree = "<group>"; };
+		5F8E877B2BA05B9900CB34B5 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		5F8E877D2BA05BC200CB34B5 /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2211262BA0BC4100379888 /* Alamofire in Frameworks */,
+				5F8472B12BA0D8C700D429C0 /* AlamofireNetworkActivityLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F38678A2BA07E9300FEEEB4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5F38678B2BA07EA900FEEEB4 /* RepositoryCard.swift */,
+				5F38678D2BA07F4A00FEEEB4 /* RepositoryViewModel.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		5F8E871A2B9F30E200CB34B5 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +147,8 @@
 		5F8E87252B9F30E200CB34B5 /* PinkRoomChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				5F38678A2BA07E9300FEEEB4 /* Repository */,
+				5F8E87782BA05B5300CB34B5 /* Filters */,
 				5F8E876B2B9F4E8F00CB34B5 /* Popup */,
 				5F8E87542B9F31F300CB34B5 /* SideMenu */,
 				5F8E87532B9F31E800CB34B5 /* Welcome */,
@@ -166,6 +193,7 @@
 			children = (
 				5F8E87552B9F321900CB34B5 /* HomeView.swift */,
 				5F8E87572B9F322800CB34B5 /* HomeViewModel.swift */,
+				5F3867882BA072D300FEEEB4 /* HomeModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -217,6 +245,16 @@
 			path = Popup;
 			sourceTree = "<group>";
 		};
+		5F8E87782BA05B5300CB34B5 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				5F8E877B2BA05B9900CB34B5 /* Filters.swift */,
+				5F8E87792BA05B7600CB34B5 /* FiltersView.swift */,
+				5F8E877D2BA05BC200CB34B5 /* FiltersViewModel.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -233,6 +271,10 @@
 			dependencies = (
 			);
 			name = PinkRoomChallenge;
+			packageProductDependencies = (
+				5F2211252BA0BC4100379888 /* Alamofire */,
+				5F8472B02BA0D8C700D429C0 /* AlamofireNetworkActivityLogger */,
+			);
 			productName = PinkRoomChallenge;
 			productReference = 5F8E87232B9F30E200CB34B5 /* PinkRoomChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -305,6 +347,10 @@
 				Base,
 			);
 			mainGroup = 5F8E871A2B9F30E200CB34B5;
+			packageReferences = (
+				5F2211242BA0BC4100379888 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5F8472AF2BA0D8C700D429C0 /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */,
+			);
 			productRefGroup = 5F8E87242B9F30E200CB34B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,20 +393,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F8E877A2BA05B7600CB34B5 /* FiltersView.swift in Sources */,
 				5F8E87712B9F4EEB00CB34B5 /* Popup.swift in Sources */,
 				5F8E87752B9F853400CB34B5 /* PopupViewModel.swift in Sources */,
 				5F8E87682B9F33D100CB34B5 /* SideMenu.swift in Sources */,
+				5F3867892BA072D300FEEEB4 /* HomeModel.swift in Sources */,
 				5F8E875C2B9F32DF00CB34B5 /* MainViewModel.swift in Sources */,
 				5F8E87642B9F336E00CB34B5 /* WelcomeViewModel.swift in Sources */,
 				5F8E87602B9F331000CB34B5 /* LoginView.swift in Sources */,
 				5F8E87272B9F30E200CB34B5 /* PinkRoomChallengeApp.swift in Sources */,
 				5F8E87622B9F334800CB34B5 /* WelcomeView.swift in Sources */,
 				5F8E876A2B9F33F900CB34B5 /* SideMenuView.swift in Sources */,
+				5F8E877C2BA05B9900CB34B5 /* Filters.swift in Sources */,
 				5F8E875E2B9F32F900CB34B5 /* LoginViewModel.swift in Sources */,
+				5F38678C2BA07EA900FEEEB4 /* RepositoryCard.swift in Sources */,
+				5F38678E2BA07F4A00FEEEB4 /* RepositoryViewModel.swift in Sources */,
 				5F8E875A2B9F32A100CB34B5 /* MainView.swift in Sources */,
 				5F8E87582B9F322800CB34B5 /* HomeViewModel.swift in Sources */,
 				5F8E87662B9F338B00CB34B5 /* SideMenuViewModel.swift in Sources */,
 				5F8E87562B9F321900CB34B5 /* HomeView.swift in Sources */,
+				5F8E877E2BA05BC200CB34B5 /* FiltersViewModel.swift in Sources */,
 				5F8E876F2B9F4ED000CB34B5 /* PopupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -687,6 +739,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F2211242BA0BC4100379888 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		5F8472AF2BA0D8C700D429C0 /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/konkab/AlamofireNetworkActivityLogger.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F2211252BA0BC4100379888 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F2211242BA0BC4100379888 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5F8472B02BA0D8C700D429C0 /* AlamofireNetworkActivityLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F8472AF2BA0D8C700D429C0 /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */;
+			productName = AlamofireNetworkActivityLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F8E871B2B9F30E200CB34B5 /* Project object */;
 }

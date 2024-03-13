@@ -23,7 +23,7 @@ struct MainView: View {
                 LoginView(presentPopup: $mainViewModel.presentPopup)
                     .tag(1)
                     .toolbar(.hidden, for: .tabBar)
-                HomeView(presentSideMenu: $mainViewModel.presentSideMenu)
+                HomeView(presentSideMenu: $mainViewModel.presentSideMenu, presentFilters: $mainViewModel.presentFilters, availableLanguages: $mainViewModel.availableLanguages, availableTopics: $mainViewModel.availableTopics, starsAscending: $mainViewModel.starsAscending)
                     .tag(2)
                     .toolbar(.hidden, for: .tabBar)
             }
@@ -31,6 +31,8 @@ struct MainView: View {
             SideMenu(presentSideMenu: $mainViewModel.presentSideMenu, selectedSideMenuTab: $mainViewModel.selectedSideMenuTab, content: AnyView(SideMenuView(presentSideMenu: $mainViewModel.presentSideMenu, selectedSideMenuTab: $mainViewModel.selectedSideMenuTab)))
             
             Popup(presentPopup: $mainViewModel.presentPopup, content: AnyView(PopupView()))
+            
+            Filters(presentFilters: $mainViewModel.presentFilters, selectedFilter: $mainViewModel.selectedFilter, starsAscending: $mainViewModel.starsAscending, availableLanguages: $mainViewModel.availableLanguages, availableTopics: $mainViewModel.availableTopics, content: AnyView(FiltersView(presentFilters: $mainViewModel.presentFilters, selectedFilter: $mainViewModel.selectedFilter, starsAscending: $mainViewModel.starsAscending, availableLanguages: $mainViewModel.availableLanguages, availableTopics: $mainViewModel.availableTopics)))
         }
         .navigationBarBackButtonHidden(true)
     }
@@ -39,7 +41,7 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(selectedSideMenuTab: 1)
+        MainView(selectedSideMenuTab: 2)
     }
 }
 
