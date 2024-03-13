@@ -44,4 +44,3 @@ struct MainView_Previews: PreviewProvider {
         MainView(selectedSideMenuTab: 2)
     }
 }
-

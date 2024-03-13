@@ -75,15 +75,8 @@ struct HomeView: View {
             }
         }
     }
-}
-
-struct RepositoriesListView: View {
-    var items: [Repository]
-    init(items: [Repository]) {
-        self.items = items
-    }
     
-    var body: some View {
+    func RepositoriesListView(items: [Repository]) -> some View {
         ScrollView {
             ForEach(items, id: \.self) {
                 item in
