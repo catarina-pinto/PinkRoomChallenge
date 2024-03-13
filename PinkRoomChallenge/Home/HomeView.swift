@@ -10,8 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var homeViewModel: HomeViewModel
     
-    init(presentSideMenu: Binding<Bool>, presentFilters: Binding<Bool>, availableLanguages: Binding<[Item]>, availableTopics: Binding<[Item]>, starsAscending: Binding<Bool>) {
-        homeViewModel = HomeViewModel(presentSideMenu: presentSideMenu, presentFilters: presentFilters, availableLanguages: availableLanguages, availableTopics: availableTopics, starsAscending: starsAscending)
+    init(presentSideMenu: Binding<Bool>, presentFilters: Binding<Bool>, availableLanguages: Binding<[Item]>, availableTopics: Binding<[Item]>, starsAscending: Binding<Bool>, repositories: Binding<[Repository]>) {
+        homeViewModel = HomeViewModel(presentSideMenu: presentSideMenu, presentFilters: presentFilters, availableLanguages: availableLanguages, availableTopics: availableTopics, starsAscending: starsAscending, repositories: repositories)
     }
     
     var body: some View {
@@ -55,21 +55,35 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                if homeViewModel.repositories.isEmpty {
+                if homeViewModel.repositories.wrappedValue.isEmpty {
                     ProgressView()
                         .controlSize(.large)
                     Spacer()
                 } else {
-                    RepositoriesListView(items: homeViewModel.repositories)
-                        .padding(.top, 15)
-                    
+                    RepositoriesListView(items: homeViewModel.repositories.wrappedValue)
                 }
             }
             .background(Color("PinkRoomGray"))
+            .onAppear {
+                homeViewModel.load(firstCall: true)
+            }
+            .onChange(of: [homeViewModel.availableLanguages.wrappedValue, homeViewModel.availableTopics.wrappedValue]) { _ in
+                homeViewModel.load(firstCall: false)
+            }
+            .onChange(of: homeViewModel.starsAscending.wrappedValue) { _ in
+                homeViewModel.load(firstCall: false)
+            }
         }
     }
+}
+
+struct RepositoriesListView: View {
+    var items: [Repository]
+    init(items: [Repository]) {
+        self.items = items
+    }
     
-    func RepositoriesListView(items: [Repository]) -> some View {
+    var body: some View {
         ScrollView {
             ForEach(items, id: \.self) {
                 item in
@@ -77,11 +91,10 @@ struct HomeView: View {
             }
         }
     }
-    
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(presentSideMenu: .constant(false), presentFilters: .constant(false), availableLanguages: .constant([Item]()), availableTopics: .constant([Item]()), starsAscending: .constant(false))
+        HomeView(presentSideMenu: .constant(false), presentFilters: .constant(false), availableLanguages: .constant([Item]()), availableTopics: .constant([Item]()), starsAscending: .constant(false), repositories: .constant([Repository]()))
     }
 }

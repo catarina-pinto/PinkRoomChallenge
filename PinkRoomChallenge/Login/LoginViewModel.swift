@@ -31,7 +31,6 @@ class LoginViewModel: ObservableObject {
         let authorized = authorizedUsers.contains { [userToAuthenticate].contains($0) }
         if authorized {
             self.shouldNavigate = true
-            print("Should navigate 2")
         }
         else {
             self.presentPopup.wrappedValue.toggle()

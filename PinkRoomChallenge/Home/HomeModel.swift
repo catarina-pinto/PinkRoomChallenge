@@ -12,7 +12,7 @@ import AlamofireNetworkActivityLogger
 struct APIResponse: Decodable {
     let totalCount: Int
     let incompleteResults: Bool
-    let items: [Items]
+    let items: [Content]
     
     private enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
@@ -21,7 +21,7 @@ struct APIResponse: Decodable {
     }
 }
 
-struct Items: Decodable {
+struct Content: Decodable {
     var name: String
     var owner: Owner
     var description: String?
@@ -45,7 +45,7 @@ struct Owner: Codable {
     }
 }
 
-struct Repository: Codable, Hashable {
+struct Repository: Hashable {
     var name: String
     var description: String
     var language: String
@@ -54,20 +54,22 @@ struct Repository: Codable, Hashable {
 }
 
 class HomeModel {
-    func load(availableLanguages: [Item], availableTopics: [Item], starsAscending: Bool, completion: @escaping ([Repository]) -> Void) {
+    func load(availableLanguages: [Item], availableTopics: [Item], starsAscending: Bool, firstCall: Bool, completion: @escaping ([Repository]) -> Void) {
         NetworkActivityLogger.shared.startLogging()
         
         let filter = filters(availableLanguages: availableLanguages, availableTopics: availableTopics, starsAscending: starsAscending)
         
         let url = "https://api.github.com/search/repositories?q=" + filter
-        let request = AF.request(url)
+        let _ = AF.request(url)
             .validate()
             .responseDecodable(of: APIResponse.self) { (response) in
                 guard let list = response.value  else { return }
                 
                 completion(self.populateRepositoriesList(list: list))
                 
-                self.scheduleRepetition(availableLanguages: availableLanguages, availableTopics: availableTopics, starsAscending: starsAscending)
+                if firstCall {
+                    self.scheduleRepetition(availableLanguages: availableLanguages, availableTopics: availableTopics, starsAscending: starsAscending, firstCall: firstCall)
+                }
             }
     }
     
@@ -81,9 +83,9 @@ class HomeModel {
         return repositories
     }
     
-    func scheduleRepetition(availableLanguages: [Item], availableTopics: [Item], starsAscending: Bool) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 50.0) {
-            self.load(availableLanguages: availableLanguages, availableTopics: availableTopics, starsAscending: starsAscending) { _ in
+    func scheduleRepetition(availableLanguages: [Item], availableTopics: [Item], starsAscending: Bool, firstCall: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3600.0) {
+            self.load(availableLanguages: availableLanguages, availableTopics: availableTopics, starsAscending: starsAscending, firstCall: firstCall) { _ in
             }
         }
     }
@@ -113,7 +115,6 @@ class HomeModel {
         var filter = ""
         languageFilters.forEach { languageFilter in
             filter += "+language:" + languageFilter.name
-            print(languageFilter.name, filter)
         }
         
         return filter
