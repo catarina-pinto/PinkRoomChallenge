@@ -37,6 +37,7 @@ class HomeViewModel: ObservableObject {
     
     func load(firstCall: Bool) {
         self.firstCall = firstCall
+        self.repositories.wrappedValue = [Repository]()
         
         DispatchQueue.main.async {
             _ = self.loadRepositories
